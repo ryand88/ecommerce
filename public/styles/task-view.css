@@ -1,0 +1,44 @@
+.listview-filter-container{
+    float: left;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    padding: 0px 20px 0px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.task-list-container{
+    display: inline-block;
+    margin: 10px 0px 0px 20px;
+}
+
+  .listview-filter-heading{
+     border-bottom: .5px gray solid; 
+}  
+
+ .task-container{
+    border: black solid;
+    border-width: 0px .5px .5px .5px;
+} 
+
+.task-list-header{
+    border-bottom: .5px black solid;
+}
+
+.task-list-labels{
+    text-align: center;
+}
+
+ .task-side-pane{
+    font-size: 12px;
+}
+
+.task-pane-list{
+    margin: auto;
+    padding: 0px 5px 0px 5px;
+}
+
+.task-list-content{
+    border-left: .1px lightgray solid;
+    padding: 0px 5px 0px 5px;
+} 

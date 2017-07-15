@@ -1,0 +1,37 @@
+<div class="listview-filter-container">
+    <h4 class="listview-filter-heading">Filter Options</h3>
+</div>
+<div class="task-list-container">
+    <table>
+        <tr class="task-list-header">
+            <th class="task-list-labels">Dates</th>
+            <th class="task-list-labels">Content</th>
+            <th class="task-list-labels">Options</th>
+        </tr>
+        <tr class='task-container' ng-repeat="task in tasks">
+            <td class='task-side-pane'>
+                <ul class='task-pane-list'>
+                    <li class="task-pan-items">start date: 5/10/2017</li>
+                    <li class="task-pan-items">due date: 5/11/2017</li>
+                    <li class="task-pan-items">type: building</li>
+                </ul>
+            </td>
+            <td class='task-list-content'>
+                <ul>
+                    <li>
+                        <h4>{{task.location}}</h4>
+                    </li>
+                    <li>Description: {{task.description}}</li>
+                    <li>Assigned to: {{task.assignee}}</li>
+                </ul>
+            </td>
+            <td class='task-list-options'>
+                <ul>
+                    <li><a href="#">View Task</a></li>
+                    <li><a href="#">Edit Task</a></li>
+                    <li><a href="#">change status</a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
