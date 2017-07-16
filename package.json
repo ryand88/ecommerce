@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/ryand88/ecommerce/issues"
   },
-  "homepage": "https://github.com/ryand88/ecommerce#readme"
+  "homepage": "https://github.com/ryand88/ecommerce#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "massive": "^3.0.0"
+  }
 }

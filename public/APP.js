@@ -1,23 +1,30 @@
 angular.module('taskApp', ['ui.router', 'ngMaterial', 'ngMessages'])
 
-.config(function( $stateProvider, $urlRouterProvider, $mdThemingProvider ) {
+	.config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
-	$stateProvider
-	.state('task-view', {
-		url: '/task-view',
-        templateUrl: '/views/task-view.html',
-        controller: 'taskController'
-	})
-	.state('add-task', {
-		url: '/add-task',
-		'templateUrl': './views/add-task.html',
-		controller: 'taskController'
+		$stateProvider
+			.state('task-view', {
+				url: '/task-view',
+				templateUrl: '/views/task-view.html',
+				controller: 'taskController'
+			})
+			.state('add-task', {
+				url: '/add-task',
+				'templateUrl': './views/add-task.html',
+				controller: 'taskController'
+			});
+
+		$urlRouterProvider.otherwise('/task-view');
+
+		$mdThemingProvider.theme('default')
+			.primaryPalette('light-green')
+
+		$mdThemingProvider.theme('rrbbq')
+			.primaryPalette('red')
+
+		$mdThemingProvider.theme('mobettah')
+			.primaryPalette('brown')
+
+		$mdThemingProvider.theme('sodashop')
+			.primaryPalette('cyan')
 	});
-
-	$urlRouterProvider.otherwise('/task-view');
-
-	  $mdThemingProvider.theme('default')
-    .primaryPalette('light-green')
-    .accentPalette('orange');
-
-});

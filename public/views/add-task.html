@@ -1,10 +1,29 @@
 <div class="listview-filter-container">
-    <h4 class="listview-filter-heading">Task Templates</h3>
+    <h4 class="listview-filter-heading">Service Type</h3>
+
+        <md-radio-group ng-model="template">
+            <md-radio-button value="equipment.html" class="md-primary">Equipment</md-radio-button>
+            <md-radio-button value="building.html" class="md-primary md-hue-3">Building</md-radio-button>
+            <md-radio-button value="" class="md-primary md-hue-2">Maintenance</md-radio-button>
+        </md-radio-group>
+<br>
+        <h4 class="listview-filter-heading">Brand</h3>
+
+            <md-radio-group  md-theme='{{brand}}' ng-model="brand">
+                <md-radio-button value="kneaders" class="md-primary">Kneaders</md-radio-button>
+                <md-radio-button value="rrbbq" class="md-primary">R&R BBQ</md-radio-button>
+                <md-radio-button value="mobettah" class="md-primary">Mo' Bettah</md-radio-button>
+                <md-radio-button value="sodashop" class="md-primary md-hue-2">Soda Shop</md-radio-button>
+            </md-radio-group>
 </div>
 <div layout-gt-xs="row">
     <div flex-gt-xs>
-        Scheduled Date:
-        <md-datepicker class="datePickTest" ng-model="myDate" md-placeholder="Enter date" md-min-date='minDate'></md-datepicker>
+        <md-input-container>
+            <label>Schedule date</label>
+            <md-datepicker ng-model="myDate" md-placeholder="Scheduled Date" md-min-date='minDate'></md-datepicker>
+        </md-input-container>
     </div>
 </div>
-<md-button class="md-primary">click</md-button>
+<task-template url="{{template}}"></task-template>
+
+<md-calendar ng-model="myDate"></md-calendar>
